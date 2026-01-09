@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repo') {
+        stage('Checkout Code') {
             steps {
-                git 'https://github.com/asmisalha07/finaldevops.git'
+                checkout scm
             }
         }
 
@@ -15,3 +15,4 @@ pipeline {
         }
     }
 }
+
